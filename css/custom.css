@@ -47,13 +47,6 @@ form.wufoo {
   position: relative;
 }
 
-/*form ul {
-  margin: 20px 14px 0 14px;
-  padding: 0 0 20px 0;
-}*/
-
-
-
 @media only screen and (max-width: 480px) {
     html {
         background: none;
@@ -83,6 +76,7 @@ form.wufoo {
 }
 
 /* Logo */
+
 #logo a {
   background-image:url('https://raw.githubusercontent.com/codeforamerica/codeforamerica.org/master/assets/logo.png'); 
   background-size: 90px;
@@ -104,6 +98,7 @@ form.wufoo {
 }
 
 /* Header */
+
 #header:before {
   background: url("http://www.codeforamerica.org/media/images/about/about_header.jpg") center center no-repeat;
   background-size: cover;
@@ -119,8 +114,6 @@ form.wufoo {
 }
 
 #header {
-/*  background: url("http://www.codeforamerica.org/media/images/about/about_header.jpg") center center no-repeat;
-  background-size: cover;*/
   position: relative;
   overflow: hidden;
   color: white;
@@ -156,21 +149,6 @@ form.wufoo {
   padding-top: 100px;
 }
 
-/*#header div {
-  position: absolute;
-  color: black;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-  padding-top: 15px;
-  padding-left: 10%;
-  padding-right: 10%;
-
-  font-weight: 800;
-  font-size: 85%;
-}*/
-
 #header div {
   padding-top: 20px;
   font-size: 115%;
@@ -203,7 +181,7 @@ form.wufoo {
   #header h2 {
     font-size: 40px;
     line-height: 42px;
-    padding-top: 50px;
+    padding-top: 80px;
   }
 }
 
