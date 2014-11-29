@@ -298,10 +298,10 @@ form li.focused {
   display: block;
   font-size: 0.85em;
   line-height: 1.25rem;
-  line-height: 20px;
+  line-height: 18px;
   margin-bottom: 0;
   margin-right: 0.5em;
-  padding-bottom: 0;
+  padding-bottom: 8px;
   text-transform: uppercase;
   vertical-align: middle;
 }
