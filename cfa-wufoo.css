@@ -107,6 +107,16 @@ form.wufoo {
   border-bottom: 1px solid #ccc;
 }
 
+/* On tablet/mobile, don't unstick the header */
+@media screen and (max-width: 750px) {
+  #logo {
+    position: relative;
+  }
+  form.wufoo {
+    margin-top: 0;
+  }
+}
+
 /* Header */
 
 #header:before {
@@ -193,7 +203,7 @@ form.wufoo {
   #header h2 {
     font-size: 40px;
     line-height: 42px;
-    padding-top: 80px;
+    padding-top: 40px;
   }
 }
 
@@ -230,8 +240,8 @@ form li.focused {
   form li.focused {
     transition: none;
     background: inherit;
-    padding-left: inherit;
-    padding-right: inherit;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
