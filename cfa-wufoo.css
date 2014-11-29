@@ -168,7 +168,7 @@ form.wufoo {
 }
 
 /* Breakpoint for tablets */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 750px) {
   #header {
     min-height: 150px;
   }
@@ -214,11 +214,25 @@ html {
   background: #FFFFFF url(/images/fieldbg.gif) repeat-x top;
 }
 
-.wufoo .focused {
+.wufoo .focused,
+.wufoo li.focused,
+form li.focused {
   transition: all 0.2s ease;
   background: rgba(122,181,214,0.2);
   padding-left: 15px;
   padding-right: 25px;
+}
+
+/* On tablet and smaller, don't show focused state */
+@media screen and (max-width: 750px) {
+  wufoo .focused,
+  .wufoo li.focused,
+  form li.focused {
+    transition: none;
+    background: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+  }
 }
 
 .wufoo .instruct {
@@ -468,7 +482,7 @@ form li.complex div span.right {
   margin-top: 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
   .wufoo .instruct {
     display: none;
   }
