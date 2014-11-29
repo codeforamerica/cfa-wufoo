@@ -28,11 +28,12 @@ body {
 
 #container {
   width: 100%;
+  overflow: hidden;
 }
 
 form ul {
-  max-width: 600px;
-  padding-top: 25px;
+  max-width: 700px;
+  padding-top: 0;
   padding-left: 15px;
   padding-right: 15px;
   display: block;
@@ -45,6 +46,15 @@ form.wufoo {
   margin-top: 40px;
   padding: 0;
   position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+  .wufoo li {
+    width: 90%;
+  }
+  input.medium, select.medium {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -151,8 +161,10 @@ form.wufoo {
 
 #header div {
   padding-top: 20px;
-  font-size: 115%;
+  font-size: 140%;
+  line-height: 160%;
   padding-bottom: 10px;
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 /* Breakpoint for tablets */
@@ -186,6 +198,7 @@ form.wufoo {
 }
 
 /* Backgrounds */
+
 html {
   background-image:none;
   background-color:white;
@@ -201,8 +214,11 @@ html {
   background: #FFFFFF url(/images/fieldbg.gif) repeat-x top;
 }
 
-.wufoo .focused{
-  background:#FFF7C0;
+.wufoo .focused {
+  transition: all 0.2s ease;
+  background: rgba(122,181,214,0.2);
+  padding-left: 15px;
+  padding-right: 25px;
 }
 
 .wufoo .instruct {
@@ -210,6 +226,8 @@ html {
 }
 
 /* Borders */
+
+
 #container {
   border: none;
   /* override #container shadow from index.css */
@@ -228,23 +246,15 @@ html {
 }
 
 /* Typography */
-/*.wufoo .info h2 { 
-  font-size:160%;
-  font-family:inherit;
-  color:#000000;
-}
-
-.wufoo .info div {
-  font-size:95%;
-  font-family:inherit;
-  color:#444444;
-}*/
 
 .wufoo .section h3 {
-  font-size:110%;
+  font-size:130%;
   font-family:inherit;
   background:#FFFFFF;
   color:#000000;
+  font-weight: 900;
+  margin-top: 40px;
+  padding-top: 20px;
 }
 
 .wufoo .section div {
@@ -255,16 +265,30 @@ html {
 
 .wufoo label.desc, 
 .wufoo legend.desc {
-  font-size:95%;
+  margin-top: 10px;
   font-family:inherit;
+  font-weight: 600;
   color:#444444;
+  font-family: "Interstate", "Gotham A", "Gotham B", "Open Sans Regular", "Verdana", "Helvetica", "Arial";
+  color: #6d6e71;
+  display: block;
+  font-size: 0.85em;
+  line-height: 1.25rem;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-right: 0.5em;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .wufoo li div, 
 .wufoo li div label, 
 .wufoo li span label {
-  font-family:inherit;
-  color:#444444;
+  color: #999595;
+  font-size: 13px;
+  line-height: 22px;
+  vertical-align: top;
 }
 
 .wufoo input.text, 
@@ -284,4 +308,207 @@ html {
   font-size:80%;
   font-family:inherit;
   color:#444444;
+  z-index: 2;
+}
+
+/* Form settings */
+
+textarea,
+textarea.textarea,
+input,
+input.text,
+select {
+    border: 1px solid;
+    border-color: #999595;
+    border-color: rgba(153, 149, 149, 0.7);
+    border-radius: 4px;
+    font-family: "Open Sans", "Interstate", "Gotham A", "Gotham B", "Open Sans Regular", "Verdana", "Helvetica", "Arial" !important; /* $font-sans-serif: */
+    margin-bottom: 16px !important;
+}
+
+.wufoo input,
+.wufoo select {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 19px;
+    margin: 5px 3px 2px 0 !important;
+    min-height: 39px;
+    padding: 0 12px;
+    vertical-align: middle;
+}
+
+@media print {
+    input,
+    select,
+    textarea {
+        border: 1px solid #999595;
+    }
+}
+
+.wufoo select {
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("http://style.codeforamerica.org/style/images/arrow-triangle-down.png");
+    background-position: 96% center;
+    background-position: top 12px right 15px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    line-height: 1.4em;
+    min-width: 150px;
+    padding: 9px 26px;
+    text-indent: 0.01px;
+    text-overflow: "";
+}
+
+select[disabled],
+select[multiple] {
+    background-image: none;
+}
+
+select[multiple] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+label.choice {
+    color: #6d6e71;
+    display: block;
+  font-size: 0.8em;
+  line-height: 1.25rem;
+    line-height: 20px;
+    margin-bottom: 0;
+  margin-right: 0.5em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+@media print {
+    label {
+        color: #494c49;
+    }
+}
+
+textarea:focus,
+input:focus {
+    border-color: #004b6a;
+    outline: 0;
+}
+
+input.invalid {
+    border: 1px solid #cf1b41;
+}
+
+input[type="text"][disabled] {
+    background: #f1f1f1;
+}
+
+abbr[title="required"],
+abbr[title="Required"] {
+    border-bottom: none;
+    color: #cf1b41;
+}
+
+textarea.textarea {
+    font-size: 16px;
+    margin: 0;
+    max-width: 98%;
+    padding: 16px 1%;
+}
+
+textarea[disabled] {
+    background: #f1f1f1;
+    cursor: not-allowed;
+}
+
+video {
+    max-width: 100%;
+}
+
+fieldset {
+    border: none;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+select[disabled] {
+    background: #f1f1f1;
+    cursor: not-allowed;
+}
+
+input[type="search"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+form li.complex div span.left, 
+form li.complex div span.right {
+  margin: 0;
+  width: 45%;
+}
+
+@media screen and (max-width: 700px) {
+  form li.complex div span.left, form li.complex div span.right {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.wufoo .instruct {
+  font-size: 100%;
+  line-height: 120%;
+  background-color: white !important;
+  border: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .wufoo .instruct {
+    display: none;
+  }
+}
+
+/* Input button */
+input.btTxt.submit {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-box-sizing: content-box;
+  -webit-box-sizing: content-box;
+  box-sizing: content-box;
+  background-color: #399fd3;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-family: "Interstate", "Gotham A", "Gotham B", "Open Sans Regular", "Verdana", "Helvetica", "Arial";
+  font-size: 14px;
+  font-weight: normal;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 8px 4px 0;
+  min-height: 19px;
+  min-width: auto;
+  overflow: visible;
+  padding: 0 26px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  vertical-align: middle;
+  width: auto;
+}
+
+input.btTxt.submit:hover {
+    background-color: #7ab5d6;
+    cursor: pointer;
+}
+
+.full input.field.file {
+  padding: 12px 12px 0 12px;
 }
