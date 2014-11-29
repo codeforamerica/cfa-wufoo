@@ -536,3 +536,9 @@ input.btTxt.submit:hover {
 .full input.field.file {
   padding: 12px 12px 0 12px;
 }
+
+/* Move down symbols between input boxes */
+span.symbol {
+  font-size: 120%;
+  line-height: 290%;
+}
