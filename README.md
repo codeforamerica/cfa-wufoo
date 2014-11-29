@@ -7,7 +7,7 @@ This repo is for the Code for America Wufoo theme. It uses modified CSS styles f
 
 ### Using it
 
-Edit your Wufoo form styles, create a custom theme and point it at [https://raw.githubusercontent.com/codeforamerica/cfa-wufoo/master/cfa-wufoo.css](https://raw.githubusercontent.com/codeforamerica/cfa-wufoo/master/cfa-wufoo.css).
+Edit your Wufoo form styles, create a custom theme and point it at [https://codeforamerica.github.io/cfa-wufoo/cfa-wufoo.css](https://codeforamerica.github.io/cfa-wufoo/cfa-wufoo.css).
 
 ### Seeing it in action
 
