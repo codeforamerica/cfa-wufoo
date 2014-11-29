@@ -1,47 +1,309 @@
 /* - - - - - - - - - - - - - - - - - - - - -
 
- Title : Wufoo 
- Author : 
- URL : http://
+ Title : Code for America Wufoo CSS
+ Author : David Leonard
+ URL : http://github.com/codeforamerica/cfa-wufoo
 
- Last Updated : 
+ Last Updated : November 28, 2014
 
 - - - - - - - - - - - - - - - - - - - - - */
 
+/* - - - Import Code for America styles - - - */
+
+@import url("http://cloud.webtype.com/css/944a7551-9b08-4f0a-8767-e0f83db4a16b.css");
+
+body {
+    position: relative;
+    color: #000;
+    font-family: "Interstate", "Gotham A", "Gotham B", "Open Sans Regular", "Verdana", "Helvetica", "Arial"; /* $font-sans-serif: */
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
 /* - - - Default - - - */
+
+/* Layouts */
+
+#container {
+  width: 100%;
+}
+
+form ul {
+  max-width: 600px;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form.wufoo {
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+  position: relative;
+}
+
+/*form ul {
+  margin: 20px 14px 0 14px;
+  padding: 0 0 20px 0;
+}*/
+
+
+
+@media only screen and (max-width: 480px) {
+    html {
+        background: none;
+        margin: 0;
+    }
+
+    body {
+        margin: 0 0 15px 0 !important;
+    }
+
+    #container,form li.focused {
+        border: none !important;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        -o-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    #container,#footer {
+        margin: 0 auto !important;
+        width: 100%;
+    }
+
+    #stripe {
+        top: 7px;
+    }
+}
 
 /* Logo */
 #logo a {
-  background-image:url('http://wufoo.com/images/themes/logos/shark.png'); 
-  min-height:0; 
-  height:40px
+  background-image:url('https://raw.githubusercontent.com/codeforamerica/codeforamerica.org/master/assets/logo.png'); 
+  background-size: 90px;
+  margin-left: 20px;
 }
-* html #logo a {/* IE6 png Support */
-  background-image: none;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://wufoo.com/images/themes/logos/shark.png", sizingMethod="crop");
+#logo {
+  min-height: 40px;
+  height: 40px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  background-color: white;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  border-bottom: 1px solid #ccc;
+}
+
+/* Header */
+#header:before {
+  background: url("http://www.codeforamerica.org/media/images/about/about_header.jpg") center center no-repeat;
+  background-size: cover;
+  content: "";
+  left: 0;
+  max-width: none;
+  min-height: 450px;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#header {
+/*  background: url("http://www.codeforamerica.org/media/images/about/about_header.jpg") center center no-repeat;
+  background-size: cover;*/
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background-color: #000;
+  min-height: 350px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#header h2,
+#header div {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-shadow: 0px 0px 3px rgba(0,0,0,0.6);
+}
+
+#header h2 {
+  clear: left;
+  display: block;
+  font-family: "Interstate", "Gotham A", "Gotham B", "Open Sans Regular", "Verdana", "Helvetica", "Arial";
+  font-size: 65px;
+  font-weight: bold;
+  letter-spacing: -3px;
+  line-height: 60px;
+  text-transform: uppercase;
+
+  padding-top: 100px;
+}
+
+/*#header div {
+  position: absolute;
+  color: black;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding-top: 15px;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  font-weight: 800;
+  font-size: 85%;
+}*/
+
+#header div {
+  padding-top: 20px;
+  font-size: 115%;
+  padding-bottom: 10px;
+}
+
+/* Breakpoint for tablets */
+@media only screen and (max-width: 800px) {
+  #header {
+    min-height: 150px;
+  }
+  #header h2,
+  #header div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #header h2 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  #header div {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+    min-height: 100px;
+  }
+  #header h2 {
+    font-size: 40px;
+    line-height: 42px;
+    padding-top: 50px;
+  }
 }
 
 /* Backgrounds */
-html{background-image:none;background-color:#99cc00}
-#logo{background-image:none;background-color:#669900}
-#container{background:#FFFFFF}
-.wufoo input.text, .wufoo textarea.textarea{background:#FFFFFF url(/images/fieldbg.gif) repeat-x top}
-.wufoo .focused{background:#FFF7C0}
-.wufoo .instruct{background-color:#F5F5F5}
+html {
+  background-image:none;
+  background-color:white;
+}
+
+#container {
+  background: #FFFFFF;
+  position: relative;
+}
+
+.wufoo input.text, 
+.wufoo textarea.textarea{
+  background: #FFFFFF url(/images/fieldbg.gif) repeat-x top;
+}
+
+.wufoo .focused{
+  background:#FFF7C0;
+}
+
+.wufoo .instruct {
+  background-color:#F5F5F5;
+}
 
 /* Borders */
-#container{border:0 solid #cccccc}
-.wufoo .info{border-bottom:1px dotted #CCCCCC}
-.wufoo .instruct{border:1px solid #e6e6e6}
+#container {
+  border: none;
+  /* override #container shadow from index.css */
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.wufoo .info {
+  border: 0;
+}
+
+.wufoo .instruct{
+  border:1px solid #e6e6e6;
+}
 
 /* Typography */
-.wufoo .info h2{font-size:160%;font-family:inherit;color:#000000}
-.wufoo .info div{font-size:95%;font-family:inherit;color:#444444}
-.wufoo .section h3{font-size:110%;font-family:inherit;background:#FFFFFF;color:#000000}
-.wufoo .section div{font-size:85%;font-family:inherit;color:#444444}
-.wufoo label.desc, .wufoo legend.desc{font-size:95%;font-family:inherit;color:#444444}
-.wufoo li div, .wufoo li div label, .wufoo li span label{font-family:inherit;color:#444444}
-.wufoo input.text, .wufoo textarea.textarea, .wufoo select.select, .wufoo label.choice{font-size:100%;font-family:inherit;color:#333333}
-.wufoo label.choice{color:#444444}
-.wufoo .instruct{font-size:80%;font-family:inherit;color:#444444
+/*.wufoo .info h2 { 
+  font-size:160%;
+  font-family:inherit;
+  color:#000000;
+}
+
+.wufoo .info div {
+  font-size:95%;
+  font-family:inherit;
+  color:#444444;
+}*/
+
+.wufoo .section h3 {
+  font-size:110%;
+  font-family:inherit;
+  background:#FFFFFF;
+  color:#000000;
+}
+
+.wufoo .section div {
+  font-size:85%;
+  font-family:inherit;
+  color:#444444;
+}
+
+.wufoo label.desc, 
+.wufoo legend.desc {
+  font-size:95%;
+  font-family:inherit;
+  color:#444444;
+}
+
+.wufoo li div, 
+.wufoo li div label, 
+.wufoo li span label {
+  font-family:inherit;
+  color:#444444;
+}
+
+.wufoo input.text, 
+.wufoo textarea.textarea, 
+.wufoo select.select, 
+.wufoo label.choice {
+  font-size:100%;
+  font-family:inherit;
+  color:#333333;
+}
+
+.wufoo label.choice {
+  color:#444444;
+}
+
+.wufoo .instruct{
+  font-size:80%;
+  font-family:inherit;
+  color:#444444;
 }
