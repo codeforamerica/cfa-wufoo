@@ -10,7 +10,3 @@ Edit your Wufoo form styles, create a custom theme and point it at [https://raw.
 ### Seeing it in action
 
 See it in use on the [Speakers' Request form](https://codeforamerica.wufoo.com/forms/code-for-america-speakers-request/).
-
-### SSL issue
-
-Github pages does not support SSL. For now, Wufoo forms that load in https will not serve up the stylesheet due to SSL errors. Load all forms over regular http that use this theme.
