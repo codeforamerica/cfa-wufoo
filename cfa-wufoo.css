@@ -235,7 +235,7 @@ form li.focused {
 
 /* On tablet and smaller, don't show focused state */
 @media screen and (max-width: 750px) {
-  wufoo .focused,
+  .wufoo .focused,
   .wufoo li.focused,
   form li.focused {
     transition: none;
@@ -289,8 +289,8 @@ form li.focused {
 
 .wufoo label.desc, 
 .wufoo legend.desc {
-  margin-top: 10px;
-  font-family:inherit;
+/*  margin-top: 10px;
+*/  font-family:inherit;
   font-weight: 600;
   color:#444444;
   font-family: "Interstate", "Gotham A", "Gotham B", "Open Sans Regular", "Verdana", "Helvetica", "Arial";
@@ -336,6 +336,10 @@ form li.focused {
 }
 
 /* Form settings */
+
+form li {
+  margin-top: 30px;
+}
 
 textarea,
 textarea.textarea,
